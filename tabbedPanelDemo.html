@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TabbedPanel Demo</title>
+<style type="text/css"> 
+/* Misc */ 
+window,body {
+    width: 100%;
+    height: 100%;
+}
+         
+body {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+}
+*, *:before, *:after{
+ webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+a{
+    color: #428bca;
+    text-decoration: none;
+    background: transparent;
+}
+a:hover, a:focus{
+    color: #2a6496;
+}
+
+
+#container {
+    width: 300px;
+    height: 300px;
+}
+#container .tabs > div{
+	padding: 5px;
+}
+
+
+
+#container.tabbedPanel ul li.active{
+	background: #f1f1f1; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f1f1f1 0%, #ededed 50%, #e8e8e8 51%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(50%,#ededed), color-stop(51%,#e8e8e8), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f1f1f1 0%,#ededed 50%,#e8e8e8 51%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f1f1f1 0%,#ededed 50%,#e8e8e8 51%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f1f1f1 0%,#ededed 50%,#e8e8e8 51%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f1f1f1 0%,#ededed 50%,#e8e8e8 51%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	
+	border-bottom-color: white;
+}
+#container.tabbedPanel ul li:not(.active){
+	
+	background: #e2e2e2; /* Old browsers */
+	background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+}
+</style>
+
+<link rel="stylesheet" href="TabbedPanel.css" type="text/css" charset="utf-8">
+<script type="text/javascript" src="TabbedPanel.js"></script>
+
+</head>
+<body>	
+
+
+<div id="container" class="tabbedPanel">
+    <ul class="nav nav-tabs nav-justified">
+        <li>Tab 1</li>
+        <li>Tab 2</li>
+        <li>My Tab  button 3</li>
+    </ul>
+    <div class="tabs">
+	
+        <div id="cell1">
+			Content tab 1<br>
+			Content tab 1<br>
+			Content tab 1<br>
+			Content tab 1<br>
+        </div>
+		
+        <div id="cell2">
+            Content tab 2<br>
+            Content tab 2<br>
+            Content tab 2<br>
+			Content tab 2<br>
+        </div>
+		
+        <div id="cell3">Content tab 3
+			<br>Long...
+            <br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
+            <br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
+            <br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>END.
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+/* JAVASCRIPT GOES HERE */
+window.onload=function(){
+	tabbedPane1 = new TabbedPanel(container);
+};
+
+</script>
+  
+</body>
+</html>

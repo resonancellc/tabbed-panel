@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.tabbedPanel {
+    display: table;
+    border-collapse: collapse;
+}
+
+/* Tab bar */
+.tabbedPanel > ul {
+    display: table-row;
+    height: 0;
+    
+}
+/* Tab buttons */
+.tabbedPanel ul li {
+    display: block;
+    float: left;
+                
+    /*display: inline-block;*/
+    padding: 6px 15px;
+}
+
+/* Container of All tabs */
+.tabbedPanel > div.tabs {
+    display: table-row;
+    height: auto;
+}
+
+/* Individual Tabs */
+.tabbedPanel > div.tabs > div {
+    display: none;
+}
+
+.tabbedPanel > div.tabs > div.active {
+    display: block;
+    height: 100%;
+    overflow: auto;
+}
+
+
+/* Visual */           
+.tabbedPanel > ul {
+  margin-top: 0;
+  border-bottom: 1px solid #dddddd;                  
+}
+               
+.tabbedPanel > ul > li{
+  cursor: pointer;
+  position: relative;
+  
+  padding: 3px 15px;
+  margin-bottom: -1px;
+  margin-right: 2px;             
+
+  color: #428bca;
+  line-height: 1.428571429;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+            
+.tabbedPanel > ul > li:hover,
+.tabbedPanel > ul > li:focus {
+  color: #2a6496;
+  background-color: #eeeeee;
+  border-color: #eeeeee #eeeeee #dddddd;       
+}
+
+.tabbedPanel > ul > li.active,
+.tabbedPanel > ul > li.active:hover,
+.tabbedPanel > ul > li.active:focus {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-bottom-color: transparent;
+}
+
+.tabbedPanel > div.tabs{
+    border: 1px solid #dddddd;
+	background-color: #ffffff;
+}
